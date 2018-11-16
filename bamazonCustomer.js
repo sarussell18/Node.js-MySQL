@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var AsciiTable = require("asciitable");
-
+var inquirer = require("inquirer");
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -14,15 +14,13 @@ startApp();
 
 
 function startApp() {
-	var table = new AsciiTable(data);
-	table.setHeading('ID', 'products', 'departments', 'Price', 'Quantity');
+
 
 	connection.query('SELECT * FROM products', (err,res) => {
 		console.log(`Items available for purchase:`);
-		res.forEach((products) => {
-			console.log(products);
-		})
-		// console.log(`${table.toString()}`);
+		var table = AsciiTable(res);
+
+		console.log(table);
 
 		setTimeout(pickItem, 700);	
 	});
