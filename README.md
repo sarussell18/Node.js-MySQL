@@ -1,3 +1,16 @@
-# Node.js-MySQL
-I have created an Amazon-like storefront with the MySQL skills. The app will take in orders from customers and deplete stock from the store's inventory. The store will show products for sale, including title, category, price, and quantity. If the product is sold out it will then send you an alert. 
-This example is available for people to use if your looking to create an amazon style store. 
+What is it?
+Bamazon is a storefront built using node.js and a MySQL database that has separate functions for Customers, Managers, and Supervisors
+
+How does it work?
+Bamazon includes the following functions:
+
+Customer
+Make purchases of items that are in-stock
+Manager
+View Products for Sale
+View Low Inventory (Less than 5 in stock)
+Add to Inventory (replenish stock)
+Add New Product
+Supervisor
+View Product Sales by Department
+Create New Department
